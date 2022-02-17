@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--    1.常量注入-->
+<!--    <bean id="student" class="com.yu.entity.Student">-->
+<!--        <property name="name" value="小明"></property>-->
+<!--     </bean>-->
+<!--  2.bean注入-->
+    <bean id="address" class="com.yu.entity.Address">
+        <property name="address" value="北京"></property>
+    </bean>
+
+    <bean id="stu" class="com.yu.entity.Student">
+        <property name="name" value="张三"></property>
+        <property name="address" ref="address"></property>
+        <property name="books" >
+            <array>
+                <value>西游记</value>
+                <value>红楼梦</value>
+            </array>
+        </property>
+
+        <property name="hobbys">
+        <list>
+            <value>打球</value>
+            <value>爬山</value>
+        </list>
+        </property>
+    <property name="card">
+        <map>
+            <entry key="北京" value="天门"></entry>
+            <entry key="上海" value="东方明珠"></entry>
+        </map>
+    </property>
+        <property name="games">
+            <set>
+                <value>LOL</value>
+                <value>BOB</value>
+                <value>COC</value>
+            </set>
+        </property>
+        <property name="wife"><null/></property>
+        <property name="info">
+            <props>
+                <prop key="学号">20190604</prop>
+                <prop key="性别">男</prop>
+                <prop key="姓名">小明</prop>
+            </props>
+        </property>
+
+    </bean>
+
+</beans>

@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--P(属性: properties)命名空间 , 属性依然要设置set方法-->
+<!--<bean id="user" class="com.User" p:name="tom" p:age="20">-->
+<!--</bean>-->
+    <!--C(构造: Constructor)命名空间 , 属性依然要设置set方法-->
+<!--    把有参构造器加上，这里也能知道，c 就是所谓的构造器注入-->
+    <bean id="user" class="com.User" c:name="李四" c:age="99" scope="prototype" />
+</beans>

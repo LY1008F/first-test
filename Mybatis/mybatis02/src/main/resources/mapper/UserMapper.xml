@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yu.mapper.UserMapper">
+<!--    使用结果集映射->ResultMap-->
+    <resultMap id="resultMap" type="User">
+        <result column="pwd" property="password"></result>
+    </resultMap>
+    <select id="selectUserById" resultMap="resultMap">
+   select * from user where id=#{id}
+    </select>
+    
+    <select id="selectAllUser" parameterType="map" resultMap="resultMap">
+     select *from user limit #{startIndex},#{pageSize}
+
+    </select>
+    
+</mapper>
