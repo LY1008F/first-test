@@ -43,6 +43,7 @@ public String addBook(Books books){
       return "redirect:/book/allBook";
 }
     /*修改一本书*/
+    /*根据id先获取对象，再更改属性*/
     @RequestMapping("/toUpdateBook")
     public String toUpdateBook(Model model, int id) {
         Books books = bookService.selectBookById(id);
