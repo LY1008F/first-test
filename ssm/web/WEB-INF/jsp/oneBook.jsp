@@ -15,7 +15,7 @@
     <div class="col-md-12 column">
       <div class="page-header">
         <h1>
-          <small>查询</small>
+          <small>查询书籍</small>
         </h1>
       </div>
     </div>
