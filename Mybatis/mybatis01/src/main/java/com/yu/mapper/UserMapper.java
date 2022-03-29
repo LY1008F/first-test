@@ -25,4 +25,5 @@ public interface UserMapper {
     User select0UserByUP(@Param("username") String username,@Param("password") String password);
     User selectUserByUP2(Map<String,Object> map);
 
+
 }

@@ -15,5 +15,10 @@
      select *from user limit #{startIndex},#{pageSize}
 
     </select>
+
+    <insert id="addUser" parameterType="User">
+
+
+    </insert>
     
 </mapper>

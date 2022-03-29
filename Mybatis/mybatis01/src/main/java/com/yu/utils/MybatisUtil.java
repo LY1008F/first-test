@@ -17,6 +17,7 @@ private  static SqlSessionFactory sqlSessionFactory;
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 
 //获取sqlSession对象

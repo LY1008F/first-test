@@ -17,9 +17,9 @@ import javax.validation.constraints.Email;
 //注册bean
 @Component
 @ConfigurationProperties(prefix = "person")
-@Validated//数据校验
+//@Validated//数据校验
 public class User {
-    @Email(message = "格式错误")
+//    @Email(message = "格式错误")
     private String name;
     private Integer age;
 

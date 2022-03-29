@@ -11,6 +11,8 @@
     <modules>
         <module>mybatis01</module>
         <module>mybatis02</module>
+        <module>mybatis04</module>
+        <module>mybatis05</module>
     </modules>
 
 <dependencies>
@@ -49,9 +51,8 @@
         <version>1.18.22</version>
         <scope>provided</scope>
     </dependency>
-
-
 </dependencies>
+    <!--静态资源导出问题-->
     <build>
         <resources>
             <resource>
@@ -60,7 +61,15 @@
                     <include>**/*.properties</include>
                     <include>**/*.xml</include>
                 </includes>
-                <filtering>true</filtering>
+                <filtering>false</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>false</filtering>
             </resource>
         </resources>
     </build>

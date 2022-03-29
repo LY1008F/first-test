@@ -12,6 +12,7 @@ public interface UserMapper {
     User selectUserById(int id);
     List<User> selectAllUser(Map<String,Integer> map);
 
+    int addUser(User user);
 
 
 }
