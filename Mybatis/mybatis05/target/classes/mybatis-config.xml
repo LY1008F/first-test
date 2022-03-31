@@ -5,8 +5,15 @@
 <configuration>
     <!--导入properties文件-->
     <properties resource="db.properties"/>
+    <settings>
+        <!-- 开启延迟加载 -->
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <!-- 设置加载的数据是按需还是全部 -->
+        <setting name="aggressiveLazyLoading" value="false"/>
+    </settings>
     <typeAliases>
         <typeAlias type="com.yu.pojo.Employee" alias="Employee"/>
+        <typeAlias type="com.yu.pojo.Dept" alias="Dept"/>
     </typeAliases>
     <environments default="development">
         <environment id="development">
@@ -21,5 +28,7 @@
     </environments>
     <mappers>
         <mapper resource="mapper/EmployeeMapper.xml"/>
+        <mapper resource="mapper/EDeptMapper.xml"/>
+        <mapper resource="mapper/DeptMapper.xml"/>
     </mappers>
 </configuration>

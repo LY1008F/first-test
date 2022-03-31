@@ -1,6 +1,7 @@
 package com.yu.mapper;
 
 import com.yu.pojo.Employee;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 import java.util.Map;
@@ -11,14 +12,16 @@ public interface EmployeeMapper {
     /*查询所有员工*/
     List<Employee> selectAll();
     /*增加一个员工*/
-    void addEmployee(Employee employee);
+    int addEmployee(Employee employee);
     /*删除一个员工*/
-    boolean deleteEmployee(int id);
+    int deleteEmployee(int id);
     /*修改一个员工*/
-    void updateEmployee(Employee employee);
+    int updateEmployee(Employee employee);
     /*以map集合获取一个员工信息*/
     Map<String,Object> getMapById(int id);
-
-
-
+    /*根据id和name查询员工*/
+    /*命名参数*/
+    Employee getByIdAndName(@Param("id") int id,@Param("lastName") String lastname);
+    /*传入map值查询员工*/
+    Employee getEmpByMap(Map<String,Object> map);
 }

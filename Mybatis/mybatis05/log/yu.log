@@ -1,0 +1,118 @@
+[DEBUG][22-03-30][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 1772160903.
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getEmpById]==>  Preparing: select id, lastName, email, gender, did from employee where id = ?
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getEmpById]==> Parameters: 1(Integer)
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getEmpById]<==      Total: 1
+[DEBUG][22-03-30][com.yu.mapper.DeptMapper.getDeptById]==>  Preparing: select did,dname from dept where did=?
+[DEBUG][22-03-30][com.yu.mapper.DeptMapper.getDeptById]==> Parameters: 1(Integer)
+[DEBUG][22-03-30][com.yu.mapper.DeptMapper.getDeptById]<==      Total: 1
+[DEBUG][22-03-30][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@69a10787]
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1772160903 to pool.
+[DEBUG][22-03-30][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 1772160903.
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getEmpById]==>  Preparing: select id, lastName, email, gender, did from employee where id = ?
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getEmpById]==> Parameters: 1(Integer)
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getEmpById]<==      Total: 1
+[DEBUG][22-03-30][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@69a10787]
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1772160903 to pool.
+[DEBUG][22-03-30][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 1772160903.
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getDEById]==>  Preparing: select d.did,dname,e.id,e.lastName from dept d left join employee e on d.did=e.did where d.did=?
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getDEById]==> Parameters: 1(Integer)
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getDEById]<==      Total: 3
+[DEBUG][22-03-30][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@69a10787]
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1772160903 to pool.
+[DEBUG][22-03-30][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 1772160903.
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getOnlyDeptById]==>  Preparing: select did,dname from dept where did=?
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getOnlyDeptById]==> Parameters: 1(Integer)
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getOnlyDeptById]<==      Total: 1
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getEmpListById]==>  Preparing: select id, lastName, email, gender from employee where did = ?
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getEmpListById]==> Parameters: 1(Integer)
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getEmpListById]<==      Total: 3
+[DEBUG][22-03-30][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@69a10787]
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1772160903 to pool.
+[DEBUG][22-03-30][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 1772160903.
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getOnlyDeptById]==>  Preparing: select did,dname from dept where did=?
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getOnlyDeptById]==> Parameters: 4(Integer)
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getOnlyDeptById]<==      Total: 0
+[DEBUG][22-03-30][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@69a10787]
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1772160903 to pool.
+[DEBUG][22-03-30][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 1772160903.
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getOnlyDeptById]==>  Preparing: select did,dname from dept where did=?
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getOnlyDeptById]==> Parameters: 1(Integer)
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getOnlyDeptById]<==      Total: 1
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getEmpListById]==>  Preparing: select id, lastName, email, gender from employee where did = ?
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getEmpListById]==> Parameters: 1(Integer)
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getEmpListById]<==      Total: 3
+[DEBUG][22-03-30][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@69a10787]
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1772160903 to pool.
+[DEBUG][22-03-30][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 1772160903.
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getOnlyDeptById]==>  Preparing: select did,dname from dept where did=?
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getOnlyDeptById]==> Parameters: 1(Integer)
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getOnlyDeptById]<==      Total: 1
+[DEBUG][22-03-30][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@69a10787]
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1772160903 to pool.
+[DEBUG][22-03-30][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][22-03-30][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 1772160903.
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getOnlyDeptById]==>  Preparing: select did,dname from dept where did=?
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getOnlyDeptById]==> Parameters: 1(Integer)
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getEmpListById]====>  Preparing: select id, lastName, email, gender from employee where did = ?
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getEmpListById]====> Parameters: 1(Integer)
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getEmpListById]<====      Total: 3
+[DEBUG][22-03-30][com.yu.mapper.EDeptMapper.getOnlyDeptById]<==      Total: 1
+[DEBUG][22-03-30][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@69a10787]
+[DEBUG][22-03-30][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1772160903 to pool.

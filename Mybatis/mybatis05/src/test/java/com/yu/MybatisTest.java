@@ -1,6 +1,9 @@
 package com.yu;
 
+import com.yu.mapper.DeptMapper;
+import com.yu.mapper.EDeptMapper;
 import com.yu.mapper.EmployeeMapper;
+import com.yu.pojo.Dept;
 import com.yu.pojo.Employee;
 import com.yu.utils.MybatisUtils;
 import org.apache.ibatis.io.Resources;
@@ -12,7 +15,6 @@ import org.junit.Test;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
-import java.util.Map;
 
 public class MybatisTest {
     /*根据id查询员工*/
@@ -44,13 +46,10 @@ public class MybatisTest {
     public void addEmployee() {
         SqlSession session = MybatisUtils.getSession();
         EmployeeMapper mapper = session.getMapper(EmployeeMapper.class);
-        Employee employee = new Employee();
-        employee.setLastName("op2");
-        employee.setEmail("4456645@qq.com");
-        employee.setGender("男");
+//        Employee employee = new Employee(null,"op7","5454@qq.com","男");
+//        mapper.addEmployee(employee);
+//        System.out.println(employee.getId());
 
-        mapper.addEmployee(employee);
-        session.commit();
         session.close();
     }
 
@@ -62,7 +61,7 @@ public class MybatisTest {
         mapper.deleteEmployee(3);
 //        int i = mapper.deleteEmployee(3);
 //        boolean b = mapper.deleteEmployee(3);
-        session.commit();
+        session.commit();//事务手动提交，  SqlSession openSession(boolean autoCommit);ture自动提交事务
         session.close();
     }
 
@@ -79,14 +78,43 @@ public class MybatisTest {
 
     }
 
-    /*以map返回一个员工信息*/
+    /*查询一个员工信息*/
     @Test
     public void getMapById() {
     SqlSession session = MybatisUtils.getSession();
-    EmployeeMapper mapper = session.getMapper(EmployeeMapper.class);
-        Map<String, Object> mapById = mapper.getMapById(4);
-        System.out.println(mapById);
+  //  EmployeeMapper mapper = session.getMapper(EmployeeMapper.class);
+//        Employee employee = mapper.getByIdAndName(5, "op5");
+//        System.out.println(employee);
+//        Map<String,Object> map=new HashMap<>();
+//        map.put("id1",6);
+//        map.put("lastName1","op6");
+//        Employee empByMap = mapper.getEmpByMap(map);
+//        System.out.println(empByMap);
+        EDeptMapper mapper = session.getMapper(EDeptMapper.class);
+//        List<Employee> emp = mapper.getAllEmp();
+//        for (Employee employee : emp) {
+//            System.out.println(employee);
+//
+//        }
+//        Employee emp = mapper.getEmpById(1);
+//        System.out.println(emp.getLastName());
+//        Dept dept = mapper.getDEById(1);
+        Dept dept = mapper.getOnlyDeptById(1);
+
+        System.out.println(dept.getDname());
+
+
         session.close();
 
     }
+    /*查询部门信息*/
+    @Test
+    public void getDeptById(){
+        SqlSession session = MybatisUtils.getSession();
+        DeptMapper mapper = session.getMapper(DeptMapper.class);
+        Dept dept = mapper.getDeptById(1);
+        System.out.println(dept);
+
+    }
+
 }

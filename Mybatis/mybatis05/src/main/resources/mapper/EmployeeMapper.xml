@@ -3,39 +3,63 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yu.mapper.EmployeeMapper">
+    <!-- parameterType可以不用写，mybatis自带类型参数转换  -->
     <!--根据id查询用户-->
-<select id="selectById" parameterType="int" resultType="Employee">
-select id,lastName,email,gender
-from tbl_employee
-where id=#{id}
-</select>
+    <select id="selectById" parameterType="int" resultType="Employee">
+        select id, lastName, email, gender
+        from employee
+        where id = #{id}
+    </select>
 
-    <select id="getMapById" parameterType="int" resultType="Empoloyee">
-    select *
-from tbl_employee
-    where id=#{id}
+    <select id="getMapById" parameterType="int" resultType="Employee">
+
+
+        select *
+        from employee
+        where id = #{id}
 
     </select>
-<!--查询所有用户-->
+    <!--查询所有用户-->
     <select id="selectAll" resultType="Employee">
-select id,lastName,email,gender
-from tbl_employee
+        select id, lastName, email, gender
+        from tbl_employee
 
     </select>
-<!--添加用户-->
-    <insert id="addEmployee" parameterType="Employee">
-        insert into tbl_employee(lastName,email,gender)
-        values (#{lastName},#{email},#{gender})
+    <!--添加用户-->
+    <!--useGeneratedKeys="true" keyProperty="id"添加数据后立即查询自增长的id-->
+    <insert id="addEmployee" useGeneratedKeys="true" keyProperty="id">
+        insert into employee
+        values (null, #{lastName}, #{email}, #{gender})
     </insert>
     <!--删除用户-->
     <delete id="deleteEmployee" parameterType="int">
-        delete from tbl_employee where id=#{id}
+        delete
+        from employee
+        where id = #{id}
     </delete>
     <!--修改用户-->
     <update id="updateEmployee" parameterType="Employee">
-        update tbl_employee
-        set lastName=#{lastName},email=#{email},gender=#{gender}
+        update employee
+        set lastName=#{lastName},
+            email=#{email},
+            gender=#{gender}
 
     </update>
-
+    <!--   Employee getByIdAndName(int id,String lastname);-->
+    <!--parameters are [arg1, arg0, param1, param2]-->
+    <select id="getByIdAndName" resultType="Employee">
+        select id, lastName, email, gender
+        from employee
+        where id = #{id}
+          and lastName = #{lastName}
+    </select>
+    <!--    <select id="getByIdAndName" resultType="Employee">-->
+    <!--        select id,lastName,email,gender from tbl_employee-->
+    <!--        where id='${arg0}' and lastName='${arg1}'-->
+    <!--    </select>-->
+    <!--    &lt;!&ndash;   Employee getEmpByMap(Map<String,Object> map);&ndash;&gt;-->
+    <!--    <select id="getEmpByMap" resultType="Employee">-->
+    <!--        select id,lastName,email,gender from tbl_employee-->
+    <!--        where id=#{id1} and lastName=#{lastName1}-->
+    <!--    </select>-->
 </mapper>

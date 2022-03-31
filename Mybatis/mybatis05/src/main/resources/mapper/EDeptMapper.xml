@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yu.mapper.EDeptMapper">
+    <!--resultMap自定义映射
+    -->
+    <!--    <resultMap id="EMP" type="Employee">
+            <id column="id" property="id"/>
+            <result column="lastName" property="lastName"/>
+            <result column="email" property="email"/>
+            <result column="gender" property="gender"/>
+            <result column="did" property="dd.did"/>
+            <result column="dname" property="dd.dname"/>
+    </resultMap>-->
+    <!--    <resultMap id="EMP" type="Employee">-->
+    <!--        <id column="id" property="id"/>-->
+    <!--        <result column="lastName" property="lastName"/>-->
+    <!--        <result column="email" property="email"/>-->
+    <!--        <result column="gender" property="gender"/>-->
+    <!--  <association property="dd" javaType="com.yu.pojo.Dept">-->
+    <!--      <id column="did" property="did"/>-->
+    <!--      <result column="dname" property="dname"/>-->
+    <!--  </association>-->
+    <!--    </resultMap>-->
+    <!--&lt;!&ndash;    List<Employee> getAllEmp();&ndash;&gt;-->
+    <!--    <select id="getAllEmp"  resultMap="EMP">-->
+    <!--        select e.id,e.lastName,e.email,e.gender,e.did,d.dname from employee e left join dept d on e.did=d.did-->
+    <!--    </select>-->
+    <!--Employee getEmpById(int id);-->
+<!--    <resultMap id="emp" type="Employee">-->
+<!--        <id column="id" property="id"/>-->
+<!--        <result column="lastName" property="lastName"/>-->
+<!--        <result column="email" property="email"/>-->
+<!--        <result column="gender" property="gender"/>-->
+<!--        <association property="dd" select="com.yu.mapper.DeptMapper.getDeptById" column="did"/>-->
+<!--    </resultMap>-->
+<!--    <select id="getEmpById" resultMap="emp">-->
+<!--        select id, lastName, email, gender, did-->
+<!--        from employee-->
+<!--        where id = #{id}-->
+<!--    </select>-->
+
+
+<!--    <resultMap id="demp" type="Dept">-->
+<!--        <id column="did" property="did"/>-->
+<!--        <result column="dname" property="dname"/>-->
+<!--        <collection property="emps" ofType="Employee">-->
+<!--            <id column="id" property="id"/>-->
+<!--            <result column="lastName" property="lastName"/>-->
+<!--            <result column="email" property="email"/>-->
+<!--            <result column="gender" property="gender"/>-->
+<!--        </collection>-->
+<!--    </resultMap>-->
+<!--    &lt;!&ndash;Dept getDEById(int id);&ndash;&gt;-->
+<!--    <select id="getDEById" resultMap="demp">-->
+<!--        select d.did, dname, e.id, e.lastName-->
+<!--        from dept d-->
+<!--                 left join employee e on d.did = e.did-->
+<!--        where d.did = #{did}-->
+<!--    </select>-->
+    <!--List<Employee> getEmpListById(int id);-->
+<select id="getEmpListById" resultType="Employee">
+    select id, lastName, email, gender
+    from employee
+    where did = #{did}
+</select>
+    <resultMap id="dEMapStep" type="Dept">
+        <id column="did" property="did"/>
+        <result column="dname" property="dname"/>
+        <collection property="emps" select="com.yu.mapper.EDeptMapper.getEmpListById" column="did" fetchType="eager">
+        </collection>
+    </resultMap>
+<!--  Dept getOnlyDeptById(int id);-->
+<select id="getOnlyDeptById" resultMap="dEMapStep">
+    select did,dname from dept where did=#{did}
+</select>
+
+
+
+
+
+
+</mapper>
